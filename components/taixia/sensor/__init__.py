@@ -598,7 +598,7 @@ async def to_code(config):
             cg.add(var.set_temperature_indoor_sensor(sens))
         if CONF_WATER_FULL in config:
             sens = await sensor.new_sensor(config[CONF_WATER_FULL])
-            cg.add(var.set_appoint_left_hours_sensor(sens))
+            cg.add(var.set_water_full_sensor(sens))
         if CONF_FILTER_CLEAN in config:
             sens = await sensor.new_sensor(config[CONF_FILTER_CLEAN])
             cg.add(var.set_filter_clean_sensor(sens))
