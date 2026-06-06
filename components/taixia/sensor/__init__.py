@@ -244,16 +244,12 @@ CONFIG_SCHEMA = cv.typed_schema(
                     device_class=DEVICE_CLASS_DURATION,
                     state_class=STATE_CLASS_MEASUREMENT,
                 ),
-                cv.Optional(CONF_APPOINT_LEFT_HOURS): cv.maybe_simple_value(
-                     sensor.sensor_schema(
-                       unit_of_measurement=UNIT_HOUR,
-                       icon=ICON_TIMER,
-                       accuracy_decimals=0,
-                       device_class=DEVICE_CLASS_DURATION,
-                       state_class=STATE_CLASS_MEASUREMENT,
-                      ),
-                      # 這裡可以定義如果使用者只寫 "appoint_left_hours: " 後面不帶任何參數時的預設 key（通常是 name）
-                      default_hold_key=CONF_NAME, 
+                cv.Optional(CONF_APPOINT_LEFT_HOURS): sensor.sensor_schema(
+                    unit_of_measurement=UNIT_HOUR,
+                    icon=ICON_TIMER,
+                    accuracy_decimals=0,
+                    device_class=DEVICE_CLASS_DURATION,
+                    state_class=STATE_CLASS_MEASUREMENT,
                 ),
                 cv.Optional(CONF_OPERATING_CURRENT): sensor.sensor_schema(
                     unit_of_measurement=UNIT_PERCENT,
