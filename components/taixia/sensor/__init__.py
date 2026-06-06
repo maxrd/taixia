@@ -81,7 +81,7 @@ CONF_DRY_LEFT_HOURS = "dry_left_hours"
 CONF_TANK_CLEAN_LEFT_HOURS = "tank_clean_left_hours"
 CONF_DRY_CLEAN_LEFT_HOURS = "dry_clean_left_hours"
 CONF_TOTAL_LEFT_HOURS = "total_left_hours"
-CONF_APPOINT_LEFT_HOURS = "appointed_left_hours"
+CONF_APPOINT_LEFT_HOURS = "appoint_left_hours"
 
 CONF_WATER_FULL = "water_full"
 CONF_FILTER_CLEAN = "filter_clean"
